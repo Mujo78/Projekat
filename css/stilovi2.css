@@ -1,0 +1,151 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.news {
+    display:flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background: rgb(168, 162, 162);
+}
+.news2 {
+    display: flex;
+    margin-left: 25px;
+}
+h3 {
+    font-size: 60px;
+    font-weight: bold;
+}
+i {
+    color: #dc3545;
+}
+#i {
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+}
+h3 :hover {
+    color: white;
+}
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 10);
+    border-color: white;
+}
+.navbar-collapse {
+    flex-grow:0;
+}
+li {
+    font-size: 20px;
+}
+.btn {
+    background-color: red;
+    border-color: white;
+    color: white;
+}
+.navbar-brand {
+    font-size: 40px;
+}
+.alert{
+    text-align: center;
+}
+.alert:hover {
+    color: white;
+    background-color: #dc3545;
+}
+.alert-dark {
+    background-color: white;
+}
+.alert-dark:hover {
+    color: white;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.ZaApi {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.carousel-item {
+    margin-right: 0%;
+    float: right;
+}
+.new_cars {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.foter {
+    height: 220px;
+    background-color: black;
+    display: flex;
+}
+.main {
+    color: rgb(198, 185, 185);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 50px;
+}
+#logo {
+    margin-left: 90px;
+}
+.overlay {
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba((0), 0, 0, 0.7);
+    z-index:1;
+    display: none;
+}
+#pretraga {
+    display:none;
+}
+.RezultatiPretrage {
+    display:none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#buttons2 {
+    display: none;
+}
+@media only screen and (max-width: 412px) {
+   .head {
+        
+        text-align: center;
+        justify-content: center; 
+   }
+   h3 {
+        font-size: 40px;
+        margin-left: 0px;
+   }
+   .foter {
+       height: 300px;
+   }
+   #logo {
+       margin-left: 0px;
+   }
+   .new_cars {
+       justify-content: center;
+   }
+   .news {
+        display: none;
+   }
+}
+
+
