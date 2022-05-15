@@ -141,19 +141,25 @@ li {
     border: #dc3545;
     border-width: 2px;
     border-radius: 0px;
-    border-style: solid; 
+    border-style: solid;
+    border-top-color: white;
+    border-bottom-color: white; 
 }
 .c_data{
     border: #dc3545;
     border-width: 2px;
     border-radius: 0px;
     border-style: solid;
+    border-top-color: white;
+    border-bottom-color: white;
 }
 .social_network{
     border: #dc3545;
     border-width: 2px;
     border-radius: 0px;
     border-style: solid;
+    border-top-color: white;
+    border-bottom-color: white;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -164,6 +170,22 @@ li {
     border-width: 2px;
     border-radius: 0px;
     border-style: solid;
+    border-top-color: white;
+    border-bottom-color: white;
+}
+.pharagraphs {
+    display: flex;
+    flex-wrap: wrap;
+    border: #dc3545;
+    border-width: 2px;
+    border-radius: 0px;
+    border-style: solid;
+}
+.History{
+    text-align: justify;
+}
+.Profil {
+    text-align: justify;
 }
 @media only screen and (max-width: 412px) {
    .head {
