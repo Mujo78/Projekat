@@ -1,9 +1,6 @@
 function submit () {
     location.href = '/html/index2.html';
 }
-
-
-
 // GET 
 fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars')
     .then(res => {
@@ -128,7 +125,6 @@ function submit () {
     let lpassword = valueOfPassword.length;
     let positionOfAt = valueOfEmail.indexOf('@');
     let beforeAt = valueOfEmail.substring(0, positionOfAt);
-
     if(valueOfEmail === ''){
         window.alert('Molimo unesite vas mail');
     }else{

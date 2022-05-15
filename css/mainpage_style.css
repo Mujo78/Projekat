@@ -47,7 +47,7 @@ h3 :hover {
     flex-grow:0;
 }
 li {
-    font-size: 20px;
+    font-size: 30px;
 }
 .btn {
     background-color: red;
@@ -124,6 +124,47 @@ li {
 #buttons2 {
     display: none;
 }
+.contacts {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    border: #dc3545;
+    border-radius: 0px;
+    border-width: 2px;
+    border-style: solid
+
+}
+.map-responsive{
+    display:flex;
+    flex-wrap: wrap;
+    overflow:hidden;
+    border: #dc3545;
+    border-width: 2px;
+    border-radius: 0px;
+    border-style: solid; 
+}
+.c_data{
+    border: #dc3545;
+    border-width: 2px;
+    border-radius: 0px;
+    border-style: solid;
+}
+.social_network{
+    border: #dc3545;
+    border-width: 2px;
+    border-radius: 0px;
+    border-style: solid;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.bank {
+    border: #dc3545;
+    border-width: 2px;
+    border-radius: 0px;
+    border-style: solid;
+}
 @media only screen and (max-width: 412px) {
    .head {
         
@@ -146,6 +187,8 @@ li {
    .news {
         display: none;
    }
+   .map-responsive {
+       margin-left: 0px;
+   }
 }
-
 
