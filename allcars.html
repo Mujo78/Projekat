@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Salon M</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/mainpagestyle.css">
+</head>
+<body>
+    <div class="head">
+        <div class="news">
+            <div class="img1" style="margin-right: 5px;" >
+                <img src="./img/icons8-clock-48.png" alt="time">
+            </div>
+            <div class="text">
+                <h5>RADNO VRIJEME</h5>
+                "Pon - Pet : 09:00 - 18:00h" <br>
+                "Sub 09:00 - 15:00h"
+            </div>
+        </div>
+        <div class="news">
+            <div class="img1" style="margin-right: 5px;" >
+                <img src="./img/icons8-call-48.png" alt="time">
+            </div>
+            <div class="text">
+                <h5>KONTAKTIRAJTE NAS</h5>
+                "Tel: +38762111222333" <br>
+                "Viber: +38762444555666"
+            </div>
+        </div>
+        <div class="news">
+            <div class="img2" style="margin-right: 5px;" >
+                <img src="./img/icons8-location-48.png" alt="time">
+            </div>
+            <div class="text">
+                <h5>ADRESA</h5>
+                "Ulica b.b" <br>
+                "Travnik, BiH"
+            </div>
+        </div>
+        <div class="news2">
+               <h3>AUTO SALON <i>M</i></h3>
+               
+        </div>
+    </div>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg header-nav navbar-light bg-danger">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><i id="i">M</i></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarupportedContent" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-between" id="navbarupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="mainpage.html">Početna</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Sva vozila</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="addingcars.html">Postavljanje vozila</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html" >About</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link" href="contacts.html">Kontakt</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <br>
+          <form class="d-flex">
+            <input class="form-control me-2 " type="search" placeholder="Pretraži.." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" onclick="showCars2()">Search</button>
+          </form>
+          <br>
+    </div>
+    <div class="search_results">
+        <div class="all">
+            <h4><b>Advanced search</b></h4>
+            <hr>
+            <div class="year_range">
+                <label for="customRange1" class="form-label">Godište</label>
+                <input type="range" class="form-range" id="customRange1" min="2010" max="2022">
+            </div>
+            <hr>
+            <div class="price">
+                <label for="customRange1" class="form-label">Cijena</label>
+                <input type="range" class="form-range" id="customRange1">
+            </div>
+            <hr>
+            <button class="btn btn-outline-success" type="submit" onclick="showCars2()">Search</button>
+        </div>
+        <div class="container2 px-4">
+          <div class="row gx-5">
+            <div class="col">
+              <div class="p-3 border bg-light" id="pretraga2"><h4 style="font-weight:bold;">Rezultati pretrage</h4></div>
+            </div>
+          </div>
+        </div>
+        <div class="forApi"></div>
+        <div class="resultsOfSearch" style="display: flex;"></div>
+          <a class="btn btn-primary" id="buttons3" onclick="DeleteSearch2()">Izbriši rezultate pretrage</a>
+        <div class="forbadge">
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary btn-lg" type="button" onclick="new_cars_soon()">Vozila u dolasku</button>
+                </div>
+                <br>
+            <div class="icons">
+                <h4><b>Search by mark</b></h4>
+                <a href="allcars.html"> <img src="./img/vw.png" alt="vs"></a> <br>
+                <a href="allcars.html"> <img src="./img/land.png" alt="vs"></a> <br>
+                <a href="allcars.html"> <img src="./img/ferrari.png" alt="vs"></a> <br>
+                <a href="allcars.html"> <img src="./img/bmw.png" alt="vs"></a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="foter">
+      <div id="pharagraph">
+        <p>Auto Salon M, Ulica b.b. Travnik, BiH <br>
+            Telefon: +38762111222333
+            Viber: +38762444555666 
+            Email: asm@example.com <br>
+            © Copyright 2022 Auto Salon M . All Rights Reserved. This site is designed and powered by GCR production.
+        </p>
+      </div>
+      <div id="logo">
+        <h3>Auto Salon<i>M</i></h3>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

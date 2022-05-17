@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto salon M</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/mainpagestyle.css">
+</head>
+<body>
+
+    <div class="head">
+        <div class="news">
+            <div class="img1" style="margin-right: 5px;" >
+                <img src="./img/icons8-clock-48.png" alt="time">
+            </div>
+            <div class="text">
+                <h5>RADNO VRIJEME</h5>
+                "Pon - Pet : 09:00 - 18:00h" <br>
+                "Sub 09:00 - 15:00h"
+            </div>
+        </div>
+        <div class="news">
+            <div class="img1" style="margin-right: 5px;" >
+                <img src="./img/icons8-call-48.png" alt="time">
+            </div>
+            <div class="text">
+                <h5>KONTAKTIRAJTE NAS</h5>
+                "Tel: +38762111222333" <br>
+                "Viber: +38762444555666"
+            </div>
+        </div>
+        <div class="news">
+            <div class="img2" style="margin-right: 5px;" >
+                <img src="./img/icons8-location-48.png" alt="time">
+            </div>
+            <div class="text">
+                <h5>ADRESA</h5>
+                "Ulica b.b" <br>
+                "Travnik, BiH"
+            </div>
+        </div>
+        <div class="news2">
+               <h3>AUTO SALON <i>M</i></h3>
+               
+        </div>
+    </div>
+    <div class="header">
+      <nav class="navbar navbar-expand-lg header-nav navbar-light bg-danger">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i id="i">M</i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarupportedContent" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarupportedContent">
+              <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href='mainpage.html'>Početna</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="allcars.html">Sva vozila</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Postavljanje vozila</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item me-5">
+                  <a class="nav-link" href="contacts.html">Kontakt</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                  <input class="form-control me-2 " type="search" placeholder="Pretraži.." aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit" disabled="true" onclick="showCars()">Search</button>
+                </form>
+            </div>
+          </div>
+        </nav>
+        <br>
+  </div>
+  <div class="form_validation">
+      <h4>Log in</h4>
+      <form class="col g-3">
+        <div class="col-auto">
+          <label for="inputEmail" class="visually-hidden">Email</label>
+          <input type="email" class="form-control1" id="inputEmail" placeholder="example@gmail.com">
+        </div>
+        <br>
+        <div class="col-auto">
+          <label for="inputPassword" class="visually-hidden">Password</label>
+          <input type="password" class="form-control2" id="inputPassword" placeholder="Password">
+        </div>
+        <br>
+        <div class="col-auto">
+          <input type="button" class="btn" id="buton" value="Submit" onclick="validation()"></button>
+        </div>
+      </form>
+      </div>
+      <div class="post-put">
+        <input type="button" class="btn btn-primary" id="buton2" value="Postaviti auto" onclick="post()"></button>
+        <input type="button" class="btn btn-primary" id="buton3" value="Urediti auto" onclick="put()"></button>
+      </div>
+      <div class="post">
+          <h4>Unos podataka</h4>
+          <br>
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputname" class="form-label">Naziv</label>
+              <input type="text" class="form-control" id="inputname" required="true">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Proizvođač</label>
+              <input type="text" class="form-control" id="inputmanufacturer" required="true">
+            </div>
+            <div class="col-12">
+              <label for="inputlink" class="form-label">Link slike</label>
+              <input type="text" class="form-control" id="inputlink" required="true">
+            </div>
+            <div class="col-md-2">
+              <label for="inputprice" class="form-label">Cijena</label>
+              <input type="text" class="form-control" id="inputprice" required="true">
+            </div>
+            <div class="col-md-2">
+                <label for="inputyear" class="form-label">Godište</label>
+                <input type="text" class="form-control" id="inputyear" required="true">
+              </div>
+            <div class="col-12">
+              <input type="button" class="btn btn-primary" value="Save" onclick="post2()">
+              <input type="button" class="btn btn-primary" value="Go Back" onclick="back()">
+            </div>
+          </form>
+      </div>
+      <div class="put"></div>
+      <br>
+      <div class="onlyOne"></div>
+      <div class="forTipka">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Odabir</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Unesite broj auta koje želite izmjeniti</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Broj</label>
+                    <textarea class="form-control" id="message-text" placeholder="Primjer: 1"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="saveIt()">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <input type="button" class="btn btn-primary" value="Go Back" onclick="back2()">
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
