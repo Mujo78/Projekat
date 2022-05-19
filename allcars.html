@@ -78,7 +78,7 @@
           <br>
           <form class="d-flex">
             <input class="form-control me-2 " type="search" placeholder="Pretraži.." aria-label="Search">
-            <button class="btn btn-outline-success" type="submit" onclick="showCars2()">Search</button>
+            <input class="btn btn-outline-success" type="button" onclick="showCars2()" value="Search">
           </form>
           <br>
     </div>
@@ -93,10 +93,10 @@
             <hr>
             <div class="price">
                 <label for="customRange1" class="form-label">Cijena</label>
-                <input type="range" class="form-range" id="customRange1">
+                <input type="range" class="form-range" id="customRange1" min="0" max="500000">
             </div>
             <hr>
-            <button class="btn btn-outline-success" type="submit" onclick="showCars2()">Search</button>
+            <input class="btn btn-outline-success" type="button" onclick="showCars2()" value="Search">
         </div>
         <div class="container2 px-4">
           <div class="row gx-5">
@@ -106,21 +106,55 @@
           </div>
         </div>
         <div class="forApi"></div>
-        <div class="resultsOfSearch" style="display: flex;"></div>
-          <a class="btn btn-primary" id="buttons3" onclick="DeleteSearch2()">Izbriši rezultate pretrage</a>
-        <div class="forbadge">
-            <div class="d-grid gap-2">
-                <button class="btn btn-primary btn-lg" type="button" onclick="new_cars_soon()">Vozila u dolasku</button>
-                </div>
-                <br>
-            <div class="icons">
-                <h4><b>Search by mark</b></h4>
-                <a href="allcars.html"> <img src="./img/vw.png" alt="vs"></a> <br>
-                <a href="allcars.html"> <img src="./img/land.png" alt="vs"></a> <br>
-                <a href="allcars.html"> <img src="./img/ferrari.png" alt="vs"></a> <br>
-                <a href="allcars.html"> <img src="./img/bmw.png" alt="vs"></a>
-            </div>
+        <div class="resultsOfSearch" style="display: none;"></div>
+          <a class="btn btn-primary" id="buttons3" style="display:none;" onclick="DeleteSearch2()">Izbriši rezultate pretrage</a>
+        
+    <div class="new_cars2">
+      <div class="card" style="width: 18rem;">
+        <img src="./img/Ford_Focus_Trend_(III)_–_Frontansicht,_17._September_2011,_Ratingen.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><b>Naziv:</b> Ford Focus <br> <b>Cijena: 35000 KM</b> <br> <b>Godište: </b>2019</p>   
         </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./img/2018_Audi_A6_Sport_40_TDi_S-A_2.0.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><b>Naziv:</b>Audi A6 <br> <b>Cijena: 80000 KM</b> <br> <b>Godište: </b>2018</p>   
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./img/BMW_G30_FL_IMG_5351.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><b>Naziv:</b>BMW G30 <br> <b>Cijena: 60000 KM</b> <br> <b>Godište: </b>2016</p>   
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./img/VW_Golf_2.0_TDI_BlueMotion_Technology_Highline_(VII)_–_Frontansicht,_28._Juli_2013,_Münster.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><b>Naziv:</b>Golf 7 <br> <b>Cijena: 15000 KM</b> <br> <b>Godište: </b>2013</p>   
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./img/VW_Passat_B8_Limousine_2.0_TDI_Highline.JPG" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><b>Naziv:</b>VW Passat B8 <br> <b>Cijena: 30000</b> <br> <b>Godište: </b>2015</p>   
+        </div>
+      </div>
+    </div>
+    <div class="forbadge">
+      <div class="d-grid gap-2">
+          <button class="btn btn-primary btn-lg" type="button" onclick="new_cars_soon()">Vozila u dolasku</button>
+          <button class="btn btn-primary btn-lg" type="button" onclick="allcars()">Sva vozila</button>
+          </div>
+          <br>
+      <div class="icons">
+          <h4><b>Search by mark</b></h4>
+          <label href="allcars.html"> <img src="./img/vw.png" alt="vs" onclick="vw()"></label> <br>
+          <label href="allcars.html"> <img src="./img/land.png" alt="land" onclick="land()"></label> <br>
+          <label href="allcars.html"> <img src="./img/ferrari.png" alt="ferrari" onclick="ferrari()"></label> <br>
+          <label href="allcars.html"> <img src="./img/bmw.png" alt="bmw" onclick="bmw()"></label>
+      </div>
+  </div>
     </div>
     <br>
     <div class="foter">

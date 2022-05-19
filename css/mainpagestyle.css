@@ -96,16 +96,7 @@ li {
     flex-wrap: wrap;
     
 }
-.overlay {
-    position:fixed;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    background: rgba((0), 0, 0, 0.7);
-    z-index:1;
-    display: none;
-}
+
 #pretraga {
     display:none;
 }
@@ -201,7 +192,8 @@ li {
 .forApi {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     border: #dc3545;
     border-width: 2px;
     border-radius: 0px;
@@ -249,6 +241,12 @@ li {
 .post-put {
     display: none;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: #dc3545;
+    border-width: 2px;
+    border-radius: 0px;
+    border-style: solid;
 }
 .post {
     display: none;
@@ -267,6 +265,24 @@ li {
 }
 .onlyOne {
     display: none;
+    justify-content: center;
+    align-content: center;
+}
+#edits {
+    display: none;
+}
+.edit {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.new_cars2 {
+    display: none;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 @media only screen and (max-width: 412px) {
    .head {
@@ -294,4 +310,17 @@ li {
        margin-left: 0px;
    }
 }
+@media only screen and (min-width: 413px) and (max-width: 960px) {
+    .head {
+        text-align: center;
+        justify-content: center; 
+   }
+   h3 {
+    font-size: 40px;
+    margin-left: 0px;
+    }
+    .news {
+        display: none;
+    }
+  }
 

@@ -16,10 +16,10 @@ fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars')
 
       data.forEach(element => {
           empty += `
-        <div class="card" style="width: 18rem; box-shadow: 0px 0px 1px #ccc;" id="${element.id}">
+        <div class="card" style="width: 18rem; box-shadow: 0px 0px 1px #ccc;">
                 <img src="${element.imageUrl}" class="card-img-top" alt="Ovdje treba biti slika...">
             <div class="card-body">
-                <h5 class="card-title">${element.name}</h5>
+                <h5 class="card-title" id="naslov">${element.id}. ${element.name}</h5>
                 <p class="card-text">Proizvođač: ${element.manufacturer} <br> <b>Cijena:</b> ${element.price} <br> Godište: ${element.year} </p>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Naruči</button>
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -31,14 +31,19 @@ fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars')
                             </div>
                             <div class="modal-body">
                                     <form>
+                                    <div class="mb-3">
+                                        <label for="message-text" class="col-form-label">Broj vozila:</label>
+                                        <textarea class="form-control" id="number-text" placeholder="Primjer: 1"></textarea>
+                                    </div>
                                         <div class="mb-3">
                                             <label for="message-text" class="col-form-label">Ostale informacije</label>
-                                            <textarea class="form-control" id="message-text" placeholder="Broj telefona..Grad....Adresa..."></textarea>
+                                            <textarea class="form-control" id="message-text" placeholder="Broj telefona..Grad....Adresa..." required="true"></textarea>
                                         </div>
                                     </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" onclick="Order(this)">Naruči</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="Order()">Naruči</button>
                             </div>
                         </div>
                     </div>
@@ -54,18 +59,23 @@ fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars')
     })
 
 //
-const Order = (order) => {
-    let orderid = order.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.id;
+const Order = () => {
+    let orderid = document.querySelector('#number-text').value;
+    orderid = parseInt(orderid);
+
         fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars/${orderid}`, {
             method: 'DELETE'
         })
         .then(res => {
             if(res.ok) {
-                let orderId = document.getElementById(orderid);
-                orderId.remove();
-            }
-            console.log(res);
-        })
+                    alert('Uspješno naručeno!');
+                    console.log(res);
+                }else{
+                    alert('Niste uspjeli naručiti, pokušajte onovno poslije..')
+                }
+            
+             
+            })
 }
 
 
@@ -165,20 +175,40 @@ fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars')
 
       data.forEach(element => {
           empty += `
-        <div class="card mb-3" style="max-width: 840px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="${element.imageUrl}" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">${element.name}</h5>
-                        <p class="card-text">Proizvođač: ${element.manufacturer} <br> <b>Cijena:</b> ${element.price} <br> Godište: ${element.year} </p>
-                        <a class="btn btn-primary" id="buttons" onclick="showImage()">Naruči</a>
-                    </div>
-                </div>
-            </div>
-        </div>`
+          <div class="card" style="width: 18rem; box-shadow: 0px 0px 1px #ccc;">
+          <img src="${element.imageUrl}" class="card-img-top" alt="Ovdje treba biti slika...">
+      <div class="card-body">
+          <h5 class="card-title" id="naslov">${element.id}. ${element.name}</h5>
+          <p class="card-text">Proizvođač: ${element.manufacturer} <br> <b>Cijena:</b> ${element.price} <br> Godište: ${element.year} </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Naruči</button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Unos podataka</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                              <form>
+                              <div class="mb-3">
+                                  <label for="message-text" class="col-form-label">Broj vozila:</label>
+                                  <textarea class="form-control" id="number-text" placeholder="Primjer: 1"></textarea>
+                              </div>
+                                  <div class="mb-3">
+                                      <label for="message-text" class="col-form-label">Ostale informacije</label>
+                                      <textarea class="form-control" id="message-text" placeholder="Broj telefona..Grad....Adresa..." required="true"></textarea>
+                                  </div>
+                              </form>
+                      </div>
+                      <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" onclick="Order()">Naruči</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>`
     });
 
         Kartica.innerHTML = empty;
@@ -264,14 +294,12 @@ DeleteSearch2 = () => {
     let placeforApi = document.querySelector('.forApi');
     let deletesearch = document.querySelector('#buttons3');
     let inputs = document.querySelector('input');
-    let input2 = document.querySelector('#input2');
 
     placeForResult.innerHTML = `<hr>`
     pretrazeno.style.display = 'none'; 
     placeForResult.style.display = 'none';
     placeforApi.style.display = 'flex';
     inputs.value = '';
-    input2.value = '';
     deletesearch.style.display = 'none';
 }
 showCars3 = () => {
@@ -342,21 +370,17 @@ validation = () => {
 }
 post = () => {
     let post = document.querySelector('.post');
-    let buton2 = document.querySelector('#buton2');
-    let buton3 = document.querySelector('#buton3');
+    let post_put = document.querySelector('.post-put'); 
 
-    buton2.style.display = 'none';
-    buton3.style.display = 'none';
+    post_put.style.display = 'none';
     post.style.display = 'flex';
 }
 back = () => {
     let post = document.querySelector('.post');
-    let buton2 = document.querySelector('#buton2');
-    let buton3 = document.querySelector('#buton3');
+    let post_put = document.querySelector('.post-put'); 
 
+    post_put.style.display = 'flex';
     post.style.display = 'none';
-    buton2.style.display = 'flex';
-    buton3.style.display = 'flex';
 }
 empty2 = () => {
     let name = document.querySelector('#inputname');
@@ -407,17 +431,25 @@ post2 = () => {
     })
 }
 put = () => {
-    let buton2 = document.querySelector('#buton2');
-    let buton3 = document.querySelector('#buton3');
     let puts = document.querySelector('.put');
     let tipke = document.querySelector('.forTipka')
+    let post_put = document.querySelector('.post-put'); 
 
-    buton2.style.display = 'none';
-    buton3.style.display = 'none';
+    post_put.style.display = 'none';
     puts.style.display = 'flex';
     tipke.style.display = 'flex';
 }
+logOut = () => {
+    let validation = document.querySelector('.form_validation');
+    let post_put = document.querySelector('.post-put');
+    input1 = document.querySelector('#inputEmail');
+    input2 = document.querySelector('#inputPassword');
 
+    validation.style.display = 'flex';
+    input1 = '';
+    input2 = '';
+    post_put.style.display = 'none';
+}
 fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars')
     .then(res => {
         if(!res.ok) {
@@ -452,16 +484,21 @@ back2 = () => {
     let buton2 = document.querySelector('#buton2');
     let buton3 = document.querySelector('#buton3');
     let tipka = document.querySelector('.forTipka');
+    let onlyOne = document.querySelector('.onlyOne');
+    let edit = document.querySelector('.edit');
+    let post_put = document.querySelector('.post-put'); 
 
+    post_put.style.display = 'flex';
     tipka.style.display = 'none';
     put.style.display = 'none';
-    buton2.style.display = 'flex';
-    buton3.style.display = 'flex';
+    edit.style.display = 'none';
+    onlyOne.style.display = 'none';
 }
 saveIt = () => {
     let num = document.querySelector('#message-text').value;
+    let edit = document.querySelector('#edits');
     num = parseInt(num);
-    console.log(typeOf(num));
+    console.log(typeof(num));
     
     fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars')
     .then(res => {
@@ -489,6 +526,7 @@ saveIt = () => {
         </div>`
         }
     });
+        edit.style.display = 'flex';
         put.style.display = 'none';
         Kartica.style.display = 'flex';
         Kartica.innerHTML = empty;
@@ -500,7 +538,60 @@ saveIt = () => {
 
 }
 edit = () => {
+    let edit1 = document.querySelector('.edit');
+    
+    edit1.style.display = 'flex';
+}
 
+edit2 = () => {
+    let num = document.querySelector('#message-text').value;
+    console.log(num);
+    let name = document.querySelector('#inputname2').value;
+    let manufacturer = document.querySelector('#inputmanufacturer2').value;
+    let linkimg = document.querySelector('#inputlink2').value;
+    let price = document.querySelector('#inputprice2').value;
+    let year = document.querySelector('#inputyear2').value;
+
+    fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars`, {
+        method: 'PUT', 
+        headers: new Headers({'content-type': 'application/json'}),
+        body: JSON.stringify({
+            id: num,
+            name: name,
+            manufacturer: manufacturer,
+            imageUrl: linkimg,
+            price: price,
+            year: year
+        })
+    })
+    .then(res => {
+        if(res.ok)
+        {
+            alert('Uspješno sačuvane izmjene! Status:204');
+        }
+    })
+   }
+cancel = () => {
+    let edit2 = document.querySelector('.edit');
+    
+    edit2.style.display = 'none';
+}
+new_cars_soon = () => {
+    let apiData = document.querySelector('.forApi');
+    let new_cars2 = document.querySelector('.new_cars2');
+
+    new_cars2.style.display = 'flex';
+    apiData.style.display = 'none';
+}
+allcars = () => {
+    let apiData = document.querySelector('.forApi');
+    let new_cars2 = document.querySelector('.new_cars2');
+
+    new_cars2.style.display = 'none';
+    apiData.style.display = 'flex';
+}
+volkswagen = () => {
+    
 }
 /*
 function submit () {
