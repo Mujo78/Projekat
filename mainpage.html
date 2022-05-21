@@ -117,15 +117,22 @@
     <br>
     <hr>
     <br>
-    <div class="container px-4">
+    <div class="top">
+      <input type="button" class="btn " onclick="showTopPonuda()" value="Pogledaj Top Ponudu">
+      <input type="button" class="btn " onclick="closeTopPonuda()" value="Sakrij Top Ponudu">
+    </div>
+    <br>
+    <br>
+    <div class="container px-4" id="ponudaTop">
       <div class="row gx-5">
         <div class="col">
-          <div class="p-3 border bg-light"><h4 style="font-weight:bold;">Top ponuda</h4></div>
+          <div class="p-3 border bg-light"><h4 style="font-weight:bold;">Top ponuda</h4>
+          </div>
         </div>
       </div>
     </div>
     <br>
-    <div class="ZaApi"></div>
+    <div id="ZaApi"></div>
     <br>
     <br>
     <br>

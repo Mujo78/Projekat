@@ -113,19 +113,6 @@
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="./img/2018_Audi_A6_Sport_40_TDi_S-A_2.0.jpg"class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title"><b>Naziv:</b>Audi A6 <br></h5>
-                <p class="card-text"> <b>Cijena: 80000 KM</b> <br> <b>Godište: </b>2018</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
               <img src="./img/BMW_G30_FL_IMG_5351.jpg"class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
@@ -163,14 +150,14 @@
           </div>
         </div>
       </div>
-        <div class="forApi" style="display: flex;"></div>
+        <div id="forApi"></div>
         <div class="resultsOfSearch" style="display: none;"></div>
         <a class="btn btn-primary" id="buttons3" style="display:none;" onclick="DeleteSearch2()">Izbriši rezultate pretrage</a>
         <div class="forbadge">
           <div class="d-grid gap-2">
             <button class="btn btn-primary btn-lg" type="button" onclick="new_cars_soon()">Vozila u dolasku</button>
-            <button class="btn btn-primary btn-lg" type="button" onclick="allcars()">Sva vozila</button>
-            <button class="btn btn-primary btn-lg" type="button" onclick="document.location.reload(true)">Sve u ponudi</button>
+            <button class="btn btn-primary btn-lg" type="button" onclick="forApi()">Sva vozila</button>
+            <button class="btn btn-primary btn-lg" type="button" onclick="carsAll()">Sve u ponudi</button>
           </div> <br>
         </div>
     </div> <br>

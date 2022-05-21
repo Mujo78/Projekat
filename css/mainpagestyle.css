@@ -87,8 +87,17 @@ li {
     background-color: #dc3545;
     border-color: #dc3545;
 }
+#ponudaTop {
+    display: none;
+}
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
 
-.ZaApi {
+#ZaApi {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -220,8 +229,8 @@ li {
     border-bottom-color: white;
 }
 
-.forApi {
-    display: flex;
+#forApi {
+    display: none;
     flex-direction: column;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -297,8 +306,10 @@ li {
     flex-wrap: wrap;
 }
 
-.put {
+#put {
     display: none;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .forTipka {
@@ -372,6 +383,10 @@ li {
     h3 {
         font-size: 40px;
         margin-left: 0px;
+    }
+    .new_cars2 {
+        justify-content: center;
+        align-items: center;
     }
     .news {
         display: none;
