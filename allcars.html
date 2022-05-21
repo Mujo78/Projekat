@@ -10,160 +10,177 @@
 </head>
 <body>
     <div class="head">
-        <div class="news">
-            <div class="img1" style="margin-right: 5px;" >
-                <img src="./img/icons8-clock-48.png" alt="time">
-            </div>
-            <div class="text">
-                <h5>RADNO VRIJEME</h5>
-                "Pon - Pet : 09:00 - 18:00h" <br>
-                "Sub 09:00 - 15:00h"
-            </div>
+      <div class="news">
+        <div class="img1" style="margin-right: 5px;" >
+          <img src="./img/icons8-clock-48.png" alt="time">
         </div>
-        <div class="news">
-            <div class="img1" style="margin-right: 5px;" >
-                <img src="./img/icons8-call-48.png" alt="time">
-            </div>
-            <div class="text">
-                <h5>KONTAKTIRAJTE NAS</h5>
+        <div class="text">
+          <h5>RADNO VRIJEME</h5>
+              "Pon - Pet : 09:00 - 18:00h" <br>
+              "Sub 09:00 - 15:00h"
+        </div>
+      </div>
+      <div class="news">
+        <div class="img1" style="margin-right: 5px;" >
+          <img src="./img/icons8-call-48.png" alt="time">
+        </div>
+        <div class="text">
+            <h5>KONTAKTIRAJTE NAS</h5>
                 "Tel: +38762111222333" <br>
                 "Viber: +38762444555666"
-            </div>
         </div>
-        <div class="news">
-            <div class="img2" style="margin-right: 5px;" >
-                <img src="./img/icons8-location-48.png" alt="time">
-            </div>
-            <div class="text">
-                <h5>ADRESA</h5>
+      </div>
+      <div class="news">
+        <div class="img2" style="margin-right: 5px;" >
+          <img src="./img/icons8-location-48.png" alt="time">
+        </div>
+        <div class="text">
+            <h5>ADRESA</h5>
                 "Ulica b.b" <br>
                 "Travnik, BiH"
-            </div>
         </div>
-        <div class="news2">
-               <h3>AUTO SALON <i>M</i></h3>
-               
-        </div>
+      </div>
+      <div class="news2">
+        <h3>AUTO SALON <i>M</i></h3>       
+      </div>
     </div>
     <div class="header">
-        <nav class="navbar navbar-expand-lg header-nav navbar-light bg-danger">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><i id="i">M</i></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarupportedContent" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-between" id="navbarupportedContent">
-                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="mainpage.html">Početna</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Sva vozila</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="addingcars.html">Postavljanje vozila</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html" >About</a>
-                  </li>
-                  <li class="nav-item me-5">
-                    <a class="nav-link" href="contacts.html">Kontakt</a>
-                  </li>
-                </ul>
+      <nav class="navbar navbar-expand-lg header-nav navbar-light bg-danger">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><i id="i">M</i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarupportedContent" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation"></button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="mainpage.html">Početna</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sva vozila</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="addingcars.html">Postavljanje vozila</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html" >About</a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link" href="contacts.html">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> <br>
+      <form class="d-flex">
+        <input class="form-control me-2 " type="search" id="unos" placeholder="Pretraži.." aria-label="Search">
+        <input class="btn btn-outline-success" type="button" onclick="showCars2()" value="Search">
+      </form> <br>
+    </div>
+    <div class="allc">
+      <div class="container2 px-4">
+        <div class="row gx-5">
+          <div class="col">
+            <div class="p-3 border bg-light" id="pretraga2"><h4 style="font-weight:bold;">Rezultati pretrage</h4></div>
+          </div>
+        </div>
+      </div>
+      <div class="new_cars2">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="./img/Ford_Focus_Trend_(III)_–_Frontansicht,_17._September_2011,_Ratingen.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><b>Naziv:</b> Ford Focus</h5>
+                <p class="card-text"> <b>Cijena: 35000 KM</b> <br> <b>Godište: </b>2019</p>
               </div>
             </div>
-          </nav>
-          <br>
-          <form class="d-flex">
-            <input class="form-control me-2 " type="search" placeholder="Pretraži.." aria-label="Search">
-            <input class="btn btn-outline-success" type="button" onclick="showCars2()" value="Search">
-          </form>
-          <br>
-    </div>
-    <div class="search_results">
-        <div class="all">
-            <h4><b>Advanced search</b></h4>
-            <hr>
-            <div class="year_range">
-                <label for="customRange1" class="form-label">Godište</label>
-                <input type="range" class="form-range" id="customRange1" min="2010" max="2022">
-            </div>
-            <hr>
-            <div class="price">
-                <label for="customRange1" class="form-label">Cijena</label>
-                <input type="range" class="form-range" id="customRange1" min="0" max="500000">
-            </div>
-            <hr>
-            <input class="btn btn-outline-success" type="button" onclick="showCars2()" value="Search">
+          </div>
         </div>
-        <div class="container2 px-4">
-          <div class="row gx-5">
-            <div class="col">
-              <div class="p-3 border bg-light" id="pretraga2"><h4 style="font-weight:bold;">Rezultati pretrage</h4></div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="./img/2018_Audi_A6_Sport_40_TDi_S-A_2.0.jpg"class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><b>Naziv:</b>Audi A6 <br></h5>
+                <p class="card-text"> <b>Cijena: 80000 KM</b> <br> <b>Godište: </b>2018</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="forApi"></div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="./img/2018_Audi_A6_Sport_40_TDi_S-A_2.0.jpg"class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><b>Naziv:</b>Audi A6 <br></h5>
+                <p class="card-text"> <b>Cijena: 80000 KM</b> <br> <b>Godište: </b>2018</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="./img/BMW_G30_FL_IMG_5351.jpg"class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><b>Naziv:</b>BMW G30 <br></h5>
+                <p class="card-text"> <b>Cijena: 60000 KM</b> <br> <b>Godište: </b>2016</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="./img/VW_Golf_2.0_TDI_BlueMotion_Technology_Highline_(VII)_–_Frontansicht,_28._Juli_2013,_Münster.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><b>Naziv:</b>Golf 7 <br> </h5>
+                <p class="card-text"> <b>Cijena: 15000 KM</b> <br> <b>Godište: </b>2013</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="./img/VW_Passat_B8_Limousine_2.0_TDI_Highline.JPG" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><b>Naziv:</b>VW Passat B8 <br> </h5>
+                <p class="card-text"> <b>Cijena: 30000</b> <br> <b>Godište: </b>2015</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="forApi" style="display: flex;"></div>
         <div class="resultsOfSearch" style="display: none;"></div>
-          <a class="btn btn-primary" id="buttons3" style="display:none;" onclick="DeleteSearch2()">Izbriši rezultate pretrage</a>
-        
-    <div class="new_cars2">
-      <div class="card" style="width: 18rem;">
-        <img src="./img/Ford_Focus_Trend_(III)_–_Frontansicht,_17._September_2011,_Ratingen.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text"><b>Naziv:</b> Ford Focus <br> <b>Cijena: 35000 KM</b> <br> <b>Godište: </b>2019</p>   
+        <a class="btn btn-primary" id="buttons3" style="display:none;" onclick="DeleteSearch2()">Izbriši rezultate pretrage</a>
+        <div class="forbadge">
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary btn-lg" type="button" onclick="new_cars_soon()">Vozila u dolasku</button>
+            <button class="btn btn-primary btn-lg" type="button" onclick="allcars()">Sva vozila</button>
+            <button class="btn btn-primary btn-lg" type="button" onclick="document.location.reload(true)">Sve u ponudi</button>
+          </div> <br>
         </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./img/2018_Audi_A6_Sport_40_TDi_S-A_2.0.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text"><b>Naziv:</b>Audi A6 <br> <b>Cijena: 80000 KM</b> <br> <b>Godište: </b>2018</p>   
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./img/BMW_G30_FL_IMG_5351.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text"><b>Naziv:</b>BMW G30 <br> <b>Cijena: 60000 KM</b> <br> <b>Godište: </b>2016</p>   
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./img/VW_Golf_2.0_TDI_BlueMotion_Technology_Highline_(VII)_–_Frontansicht,_28._Juli_2013,_Münster.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text"><b>Naziv:</b>Golf 7 <br> <b>Cijena: 15000 KM</b> <br> <b>Godište: </b>2013</p>   
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./img/VW_Passat_B8_Limousine_2.0_TDI_Highline.JPG" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text"><b>Naziv:</b>VW Passat B8 <br> <b>Cijena: 30000</b> <br> <b>Godište: </b>2015</p>   
-        </div>
-      </div>
-    </div>
-    <div class="forbadge">
-      <div class="d-grid gap-2">
-          <button class="btn btn-primary btn-lg" type="button" onclick="new_cars_soon()">Vozila u dolasku</button>
-          <button class="btn btn-primary btn-lg" type="button" onclick="allcars()">Sva vozila</button>
-          </div>
-          <br>
-      <div class="icons">
-          <h4><b>Search by mark</b></h4>
-          <label href="allcars.html"> <img src="./img/vw.png" alt="vs" onclick="vw()"></label> <br>
-          <label href="allcars.html"> <img src="./img/land.png" alt="land" onclick="land()"></label> <br>
-          <label href="allcars.html"> <img src="./img/ferrari.png" alt="ferrari" onclick="ferrari()"></label> <br>
-          <label href="allcars.html"> <img src="./img/bmw.png" alt="bmw" onclick="bmw()"></label>
-      </div>
-  </div>
-    </div>
-    <br>
+    </div> <br>
     <div class="foter">
       <div id="pharagraph">
         <p>Auto Salon M, Ulica b.b. Travnik, BiH <br>
-            Telefon: +38762111222333
-            Viber: +38762444555666 
-            Email: asm@example.com <br>
-            © Copyright 2022 Auto Salon M . All Rights Reserved. This site is designed and powered by GCR production.
+          Telefon: +38762111222333
+          Viber: +38762444555666 
+          Email: asm@example.com <br>
+          © Copyright 2022 Auto Salon M . All Rights Reserved. This site is designed and powered by GCR production.
         </p>
       </div>
       <div id="logo">

@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 .news {
     display:flex;
     align-items: center;
@@ -20,117 +21,130 @@
     height: 150px;
     background: rgb(168, 162, 162);
 }
+
 .news2 {
     display: flex;
     margin-left: 25px;
 }
+
 h3 {
     font-size: 60px;
     font-weight: bold;
 }
+
 i {
     color: #dc3545;
 }
+
 #i {
     color: white;
     font-weight: bold;
     margin-left: 20px;
 }
+
 h3 :hover {
     color: white;
 }
+
 .navbar-toggler {
     background-color: rgba(255, 255, 255, 10);
     border-color: white;
 }
+
 .navbar-collapse {
-    flex-grow:0;
+    flex-grow: 0;
 }
+
 li {
     font-size: 30px;
 }
+
 .btn {
     background-color: red;
     border-color: white;
     color: white;
 }
+
 .navbar-brand {
     font-size: 40px;
 }
-.alert{
+
+.alert {
     text-align: center;
 }
+
 .alert:hover {
     color: white;
     background-color: #dc3545;
 }
+
 .alert-dark {
     background-color: white;
 }
+
 .alert-dark:hover {
     color: white;
     background-color: #dc3545;
     border-color: #dc3545;
 }
+
 .ZaApi {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
 .carousel-item {
     margin-right: 0%;
     float: right;
 }
+
 .new_cars {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
 .foter {
     height: 200px;
+    word-wrap: break-word;
     background-color: black;
     color: rgb(198, 185, 185);
     align-content: center;
     display: flex;
     justify-content:space-evenly;
     flex-wrap: wrap;
-    
 }
 
 #pretraga {
-    display:none;
+    display: none;
 }
+
 .RezultatiPretrage {
-    display:none;
+    display: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 #buttons2 {
     display: none;
 }
+
 .contacts {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-wrap: wrap;
     border: #dc3545;
     border-radius: 0px;
     border-width: 2px;
     border-style: solid
+}
 
-}
-.map-responsive{
-    display:flex;
+.map-responsive {
+    display: flex;
     flex-wrap: wrap;
-    overflow:hidden;
-    border: #dc3545;
-    border-width: 2px;
-    border-radius: 0px;
-    border-style: solid;
-    border-top-color: white;
-    border-bottom-color: white; 
-}
-.c_data{
+    overflow: hidden;
     border: #dc3545;
     border-width: 2px;
     border-radius: 0px;
@@ -138,7 +152,17 @@ li {
     border-top-color: white;
     border-bottom-color: white;
 }
-.social_network{
+
+.c_data {
+    border: #dc3545;
+    border-width: 2px;
+    border-radius: 0px;
+    border-style: solid;
+    border-top-color: white;
+    border-bottom-color: white;
+}
+
+.social_network {
     border: #dc3545;
     border-width: 2px;
     border-radius: 0px;
@@ -150,6 +174,7 @@ li {
     flex-direction: column;
     align-items: center;
 }
+
 .bank {
     border: #dc3545;
     border-width: 2px;
@@ -158,6 +183,7 @@ li {
     border-top-color: white;
     border-bottom-color: white;
 }
+
 .pharagraphs {
     display: flex;
     flex-wrap: wrap;
@@ -166,12 +192,15 @@ li {
     border-radius: 0px;
     border-style: solid;
 }
-.History{
+
+.History {
     text-align: justify;
 }
+
 .Profil {
     text-align: justify;
 }
+
 .search_results {
     display: flex;
     flex-wrap: wrap;
@@ -181,6 +210,7 @@ li {
     border-radius: 0px;
     border-style: solid;
 }
+
 .all {
     border: #dc3545;
     border-width: 2px;
@@ -189,6 +219,7 @@ li {
     border-top-color: white;
     border-bottom-color: white;
 }
+
 .forApi {
     display: flex;
     flex-direction: column;
@@ -201,6 +232,7 @@ li {
     border-top-color: white;
     border-bottom-color: white;
 }
+
 .icons {
     display: flex;
     flex-wrap: wrap;
@@ -214,19 +246,26 @@ li {
     border-top-color: white;
     border-bottom-color: white;
 }
+
 .pretraga2 {
-    display:none;
+    display: none;
 }
+
 .resultsOfSearch {
     display: none;
+    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: column;
 }
+
 #buttons3 {
     display: none;
 }
+
 #pretraga2 {
     display: none;
 }
+
 .form_validation {
     display: flex;
     justify-content: center;
@@ -238,6 +277,7 @@ li {
     border-radius: 0px;
     border-style: solid;
 }
+
 .post-put {
     display: none;
     justify-content: center;
@@ -248,6 +288,7 @@ li {
     border-radius: 0px;
     border-style: solid;
 }
+
 .post {
     display: none;
     flex-direction: column;
@@ -255,72 +296,85 @@ li {
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .put {
     display: none;
 }
+
 .forTipka {
     display: none;
     justify-content: center;
     align-content: center;
 }
+
 .onlyOne {
     display: none;
     justify-content: center;
     align-content: center;
 }
+
 #edits {
     display: none;
 }
+
 .edit {
     display: none;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+
 .new_cars2 {
-    display: none;
+    display: flex;
     justify-content: space-evenly;
     align-content: center;
     flex-direction: column;
     flex-wrap: wrap;
 }
-@media only screen and (max-width: 412px) {
-   .head {
-        
-        text-align: center;
-        justify-content: center; 
-   }
-   h3 {
-        font-size: 40px;
-        margin-left: 0px;
-   }
-   .foter {
-       height: 300px;
-   }
-   #logo {
-       margin-left: 0px;
-   }
-   .new_cars {
-       justify-content: center;
-   }
-   .news {
-        display: none;
-   }
-   .map-responsive {
-       margin-left: 0px;
-   }
+
+.allc {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-@media only screen and (min-width: 413px) and (max-width: 960px) {
+
+@media only screen and (max-width: 412px) {
     .head {
         text-align: center;
         justify-content: center; 
-   }
-   h3 {
-    font-size: 40px;
-    margin-left: 0px;
+    }
+    h3 {
+        font-size: 40px;
+        margin-left: 0px;
+    }
+    .foter {
+       height: fit-content;
+    }
+    #logo {
+       margin-left: 0px;
+    }
+    .new_cars {
+       justify-content: center;
     }
     .news {
         display: none;
     }
-  }
+    .map-responsive {
+       margin-left: 0px;
+    }
+}
+
+@media only screen and (min-width: 413px) and (max-width: 960px) {
+    .head {
+        text-align: center;
+        justify-content: center;
+    }
+    h3 {
+        font-size: 40px;
+        margin-left: 0px;
+    }
+    .news {
+        display: none;
+    }
+}
 
