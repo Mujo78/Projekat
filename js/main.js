@@ -1,5 +1,5 @@
 // ------------------------ Mainpage
-showCars = () => {
+const showCars = () => {
     let Pretraga = document.querySelector('.RezultatiPretrage');
     let pretrazivanje = document.querySelector('#pretraga');
     let search = document.querySelector('.form-control').value;
@@ -119,7 +119,7 @@ showCars = () => {
         })
 }
 
-DeleteSearch = () => {
+const DeleteSearch = () => {
     let Pretraga = document.querySelector('.RezultatiPretrage');
     let pretrazivanje = document.querySelector('#pretraga');
     let deletesearch = document.querySelector('#buttons2');
@@ -135,7 +135,7 @@ DeleteSearch = () => {
 // GET - Mainpage
 
 
-showTopPonuda = () => {
+const showTopPonuda = () => {
 fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars')
     .then(res => {
         return res.json();
@@ -188,7 +188,8 @@ fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars')
     Kartica.innerHTML = empty;
 });
 }
-closeTopPonuda = () => {
+
+const closeTopPonuda = () => {
     let ponuda = document.getElementById('ponudaTop');
     let Kartica = document.getElementById('ZaApi');
 
@@ -213,7 +214,7 @@ const Order = () => {
     }
 
 // ----------------------------------------------------------------- Allcars
-showCars2 = () => {
+const showCars2 = () => {
     let placeForResult = document.querySelector('.resultsOfSearch');
     let pretrazeno = document.querySelector('#pretraga2');
     let placeforApi = document.querySelector('#forApi');
@@ -307,7 +308,7 @@ showCars2 = () => {
 }
 
 
-DeleteSearch2 = () => {
+const DeleteSearch2 = () => {
     let placeForResult = document.querySelector('.resultsOfSearch');
     let pretrazeno = document.querySelector('#pretraga2');
     let placeforApi = document.querySelector('#forApi');
@@ -448,7 +449,7 @@ const forApi2 = () => {
     }
 
 
-new_cars_soon = () => {
+const new_cars_soon = () => {
     let apiData = document.getElementById('forApi');
     let new_cars2 = document.querySelector('.new_cars2');
     let results = document.querySelector('.resultsOfSearch');
@@ -462,21 +463,7 @@ new_cars_soon = () => {
     apiData.style.display = 'none';
 }
 
-allcars = () => {
-    let apiData = document.getElementById('forApi');
-    let new_cars2 = document.querySelector('.new_cars2');
-    let results = document.querySelector('.resultsOfSearch');
-    let buton = document.querySelector('#buttons3');
-    let input = document.querySelector('#unos');
-
-    input.value = '';
-    buton.style.display = 'none';
-    results.style.display = 'none';
-    new_cars2.style.display = 'none';
-    apiData.style.display = 'flex';
-}
-
-carsAll = () => {
+const carsAll = () => {
     let new_cars2 = document.querySelector('.new_cars2');
     forApi2();
     new_cars2.style.display = 'flex';
@@ -485,7 +472,7 @@ carsAll = () => {
 
 //-------------------------------------------------------- AddingCars
 
-validation = () => {
+const validation = () => {
     let email = document.querySelector('.form-control1').value;
     let password = document.querySelector('.form-control2').value;
     let post_put = document.querySelector('.post-put');
@@ -499,7 +486,7 @@ validation = () => {
     }
 }
 
-post = () => {
+const post = () => {
     let post = document.querySelector('.post');
     let post_put = document.querySelector('.post-put');
 
@@ -507,7 +494,7 @@ post = () => {
     post.style.display = 'flex';
 }
 
-put = () => {
+const put = () => {
     let puts = document.querySelector('.put');
     let tipke = document.querySelector('.forTipka');
     let post_put = document.querySelector('.post-put');
@@ -517,7 +504,7 @@ put = () => {
     tipke.style.display = 'flex';
 }
 
-logOut = () => {
+const logOut = () => {
     let validation = document.querySelector('.form_validation');
     let post_put = document.querySelector('.post-put');
     input1 = document.querySelector('#inputEmail');
@@ -529,7 +516,7 @@ logOut = () => {
     post_put.style.display = 'none';
 }
 
-post2 = () => {
+const post2 = () => {
     let name = document.querySelector('#inputname').value;
     let manufacturer = document.querySelector('#inputmanufacturer').value;
     let linkimg = document.querySelector('#inputlink').value;
@@ -566,7 +553,7 @@ post2 = () => {
     }
 }
 
-back = () => {
+const back = () => {
     let post = document.querySelector('.post');
     let post_put = document.querySelector('.post-put');
 
@@ -574,7 +561,7 @@ back = () => {
     post.style.display = 'none';
 }
 
-put = () => {
+const puts = () => {
     let post_put = document.querySelector('.post-put');
     let post = document.querySelector('.post');
     let tipka = document.querySelector('.forTipka');
@@ -614,7 +601,7 @@ fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars')
     });
 }
 
-saveIt = () => {
+const saveIt = () => {
     let num = document.querySelector('#message-text').value;
     let put = document.querySelector('#put');
     let edit = document.querySelector('#edits');
@@ -665,7 +652,7 @@ saveIt = () => {
     }
 }
 
-back2 = () => {
+const back2 = () => {
     let put = document.querySelector('#put');
     let tipka = document.querySelector('.forTipka');
     let onlyOne = document.querySelector('.onlyOne');
@@ -681,13 +668,13 @@ back2 = () => {
     onlyOne.style.display = 'none';
 }
 
-edit = () => {
+const edit = () => {
     let edit1 = document.querySelector('.edit');
 
     edit1.style.display = 'flex';
 }
 
-edit2 = () => {
+const edit2 = () => {
     let num = document.querySelector('#message-text').value;
     console.log(num);
     let name = document.querySelector('#inputname2').value;
@@ -729,13 +716,13 @@ edit2 = () => {
     })
 }
 
-cancel = () => {
+const cancel = () => {
     let edit2 = document.querySelector('.edit');
 
     edit2.style.display = 'none';
 }
 
-empty2 = () => {
+const empty2 = () => {
     let name = document.querySelector('#inputname');
     let manufacturer = document.querySelector('#inputmanufacturer');
     let linkimg = document.querySelector('#inputlink');
