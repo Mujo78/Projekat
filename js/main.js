@@ -163,12 +163,12 @@ fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars')
                                 <div class="modal-body">
                                     <form>
                                         <div class="mb-3">
-                                            <label for="message-text" class="col-form-label">Broj vozila:</label>
+                                            <label for="number-text" class="col-form-label">Broj vozila:</label>
                                             <textarea class="form-control" id="number-text" placeholder="Primjer: 1"></textarea>
                                         </div>
                                         <div class="mb-3">
                                             <label for="message-text" class="col-form-label">Ostale informacije</label>
-                                            <textarea class="form-control" id="message-text" placeholder="Broj telefona..Grad....Adresa..." required="true"></textarea>
+                                            <textarea class="form-control" id="message-text" placeholder="Grad: Travnik - Adresa: Ulica b.b. -  Broj telefona: 38762000999" required></textarea>
                                         </div>
                                     </form>
                                 </div>
@@ -199,7 +199,6 @@ closeTopPonuda = () => {
 const Order = () => {
     let orderid = document.querySelector('#number-text').value;
     orderid = parseInt(orderid);
-
         fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Cars/${orderid}`, {
             method: 'DELETE'
         })
@@ -211,7 +210,7 @@ const Order = () => {
                     alert('Niste uspjeli naručiti, pokušajte onovno poslije..');
                 }             
             })
-}
+    }
 
 // ----------------------------------------------------------------- Allcars
 showCars2 = () => {
